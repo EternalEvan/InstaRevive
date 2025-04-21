@@ -81,15 +81,13 @@ The evaluation process can be done with one Nvidia GeForce RTX 3090 GPU (24GB VR
 
 We would like to express our sincere thanks to the author of [DiffBIR](https://github.com/XPixelGroup/DiffBIR) for the clear code base and quick response to our issues. 
 
-We also thank [CodeFormer](https://github.com/sczhou/CodeFormer), [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) and [LoRA](https://github.com/cloneofsimo/lora), for our code is partially borrowing from them.
-
-The new version of FlowIE based on Denoising Transformer (DiT) structure will be released soon! Thanks the newest works of DiTs, including [PixART](https://github.com/PixArt-alpha/PixArt-sigma) and [Stable Diffusion 3](https://huggingface.co/stabilityai/stable-diffusion-3-medium).
+We also thank [PixArt](https://github.com/PixArt-alpha/PixArt-sigma), [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) and [LoRA](https://github.com/cloneofsimo/lora), for our code is partially borrowing from them.
 
 ## 🔖 Citation
 Please cite us if our work is useful for your research.
 
 ```
-@misc{zhu2024flowie,
+@misc{zhu2025instarevive,
       title={InstaRevive: One-Step Image Enhancement via Dynamic Score Matching}, 
       author={Yixuan Zhu, Haolin Wang, Ao Li, Wenliang Zhao, Yansong Tang, Jingxuan Niu, Lei Chen, Jie Zhou, Jiwen Lu},
       year={2025},
