@@ -3,7 +3,7 @@ This is the official implementation of InstaRevive: One-Step Image Enhancement v
 
 # FlowIE: Efficient Image Enhancement via Rectified Flow (CVPR 2024)
 
-> [Yixuan Zhu](https://eternalevan.github.io/)\* $\dagger$, [Haolin Wang]\* , [Ao Li](https://rammusleo.github.io/), [Wenliang Zhao](https://wl-zhao.github.io/)\*, [Yansong Tang](https://andytang15.github.io/), [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1), [Jiwen Lu](http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/), [Lei Chen](https://andytang15.github.io/) $\ddagger$
+> [Yixuan Zhu](https://eternalevan.github.io/)\* $\dagger$, Haolin Wang\* , [Ao Li](https://rammusleo.github.io/), [Wenliang Zhao](https://wl-zhao.github.io/)\*, [Yansong Tang](https://andytang15.github.io/), [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1), [Jiwen Lu](http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/), [Lei Chen](https://andytang15.github.io/) $\ddagger$
 > 
 > \* Equal contribution &nbsp; $\dagger$ Project leader &nbsp; $\ddagger$ Corresponding author
 
