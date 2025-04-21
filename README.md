@@ -1,6 +1,6 @@
 # InstaRevive: One-Step Image Enhancement via Dynamic Score Matching (ICLR 2025)
 
-> [Yixuan Zhu](https://eternalevan.github.io/)\* $\dagger$, Haolin Wang\* , [Ao Li](https://rammusleo.github.io/), [Wenliang Zhao](https://wl-zhao.github.io/)\*, [Yansong Tang](https://andytang15.github.io/), Jingxuan Niu, [Lei Chen](https://andytang15.github.io/) $\ddagger$, [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1), [Jiwen Lu](http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/)
+> [Yixuan Zhu](https://eternalevan.github.io/)\* $\dagger$, [Haolin Wang](https://howlin-wang.github.io/)\* , [Ao Li](https://rammusleo.github.io/), [Wenliang Zhao](https://wl-zhao.github.io/)\*, [Yansong Tang](https://andytang15.github.io/), Jingxuan Niu, [Lei Chen](https://andytang15.github.io/) $\ddagger$, [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1), [Jiwen Lu](http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/)
 > 
 > \* Equal contribution &nbsp; $\dagger$ Project leader &nbsp; $\ddagger$ Corresponding author
 
