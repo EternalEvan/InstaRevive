@@ -1,7 +1,4 @@
-# InstaRevive
-This is the official implementation of InstaRevive: One-Step Image Enhancement via Dynamic Score Matching
-
-# FlowIE: Efficient Image Enhancement via Rectified Flow (CVPR 2024)
+# InstaRevive: One-Step Image Enhancement via Dynamic Score Matching (ICLR 2024)
 
 > [Yixuan Zhu](https://eternalevan.github.io/)\* $\dagger$, Haolin Wang\* , [Ao Li](https://rammusleo.github.io/), [Wenliang Zhao](https://wl-zhao.github.io/)\*, [Yansong Tang](https://andytang15.github.io/), [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1), [Jiwen Lu](http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/), [Lei Chen](https://andytang15.github.io/) $\ddagger$
 > 
@@ -44,11 +41,11 @@ pip install -r requirements.txt
 
 ### 🗂️ 2. Download Checkpoints
 
-Please download our pretrained checkpoints from [this link](https://cloud.tsinghua.edu.cn/d/4fa2a0880a9243999561/) and put them under `./weights`. The file directory should be:
+Please download our pretrained checkpoints from [this link](https://cloud.tsinghua.edu.cn/d/ae6cf15eb5984d3db933/) and put them under `./weights`. The file directory should be:
 
 ```
 |-- checkpoints
-|--|-- InstaRevive_sr_v1.ckpt
+|--|-- InstaRevive_v1.ckpt
 ...
 ```
 

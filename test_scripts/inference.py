@@ -170,7 +170,7 @@ def parse_args() -> Namespace:
     parser = ArgumentParser()
     
     # TODO: add help info for these options
-    parser.add_argument("--ckpt", required=True, type=str, help="full checkpoint path",default='/data1/zyx/pixart/general-prompt-real_dm_regression_1distep_constant1e-06sgmul1.0warmup0_cfg3.0_999ts_acc2_maxgrad10.0_mixedprecisionfp16_bs4_one_step_maxt400/checkpoint-30000/pytorch_model.bin')
+    parser.add_argument("--ckpt", required=True, type=str, help="full checkpoint path",default='./weights/InstaRevive_v1.ckpt')
     
     parser.add_argument("--input", type=str, required=True)
     parser.add_argument("--sr_scale", type=float, default=1)
@@ -237,19 +237,15 @@ def main() -> None:
     vae = vae.to(torch.float32).to(args.device)
     model = Transformer2DModel.from_pretrained('PixArt-alpha/PixArt-Alpha-DMD-XL-2-512x512', subfolder='transformer')
     state_dict = torch.load(
-        #'/data1/zyx/pixart/general-prompt-2_dm_regression_1distep_constant1e-06sgmul1.0warmup0_cfg3.0_999ts_acc2_maxgrad10.0_mixedprecisionfp16_bs4_one_step_maxt400/checkpoint-10000/pytorch_model.bin',map_location='cpu')
-        #'/data1/zyx/pixart/dmd-general_dm_regression_1distep_constant1e-06sgmul1.0warmup0_cfg3.0_999ts_acc2_maxgrad10.0_mixedprecisionfp16_bs4_one_step_maxt400/checkpoint-45000/pytorch_model.bin',map_location='cpu')
-        #'/data1/zyx/pixart/general-nocond_dm_regression_1distep_constant1e-06sgmul1.0warmup0_cfg3.0_999ts_acc2_maxgrad10.0_mixedprecisionfp16_bs4_one_step_maxt400/checkpoint-70000/pytorch_model.bin',map_location='cpu')
-        '/home/zyx/.cache/instarevive/weight/bsr/pytorch_model.bin',map_location='cpu')
-        #'/data1/zyx/pixart/general-prompt-2_dm_regression_1distep_constant1e-06sgmul1.0warmup0_cfg3.0_999ts_acc2_maxgrad10.0_mixedprecisionfp16_bs4_one_step_maxt400/checkpoint-30000/pytorch_model.bin',map_location='cpu')
-        #'/data1/zyx/pixart/general-nocond_dm_regression_1distep_constant1e-06sgmul1.0warmup0_cfg3.0_999ts_acc2_maxgrad10.0_mixedprecisionfp16_bs4_one_step_maxt400/checkpoint-15000/pytorch_model.bin')
+        './weights/InstaRevive_v1.ckpt',map_location='cpu')
+        
     model.load_state_dict(state_dict)
     # reload preprocess model if specified
     
     preprocess_config = './configs/swinir.yaml'
 
     preprocess_model = instantiate_from_config(OmegaConf.load(preprocess_config))
-    load_state_dict(preprocess_model, torch.load('/home/zyx/DiffBIR-main/weights/general_swinir_v1.ckpt', map_location="cpu"), strict=True)
+    load_state_dict(preprocess_model, torch.load('./weights/general_swinir_v1.ckpt', map_location="cpu"), strict=True)
 
     model.to(args.device)
     
@@ -272,32 +268,10 @@ def main() -> None:
                 Image.BICUBIC
             )
             
-        if args.use_prompt:
-            # dataset_name = file_path.split('/')[-2]
-            # prompt_dir = os.path.join('/data1/zyx/testsets/testdata/prompts',dataset_name)
-          
-            # assert os.path.isdir(prompt_dir)
-            # file_name = file_path.split('/')[-1]
-            
-            # stem, ext = os.path.splitext(file_name)
-            
-            # prompt_npz = os.path.join(prompt_dir,stem+'.npz')
-
-            prompt_npz = '/data1/zyx/pixart/imagenet_prompts/n02088238.npz'
-            
-            if os.path.exists(prompt_npz):
-                txt_info = np.load(prompt_npz)
-                txt_fea = torch.from_numpy(txt_info['caption_feature'])     # 1xTx4096
-                if 'attention_mask' in txt_info.keys():
-                    attentmask = torch.from_numpy(txt_info['attention_mask'])[None]
-                y = txt_fea.to(args.device).to(torch.float32)
-                y_mask = attentmask.to(args.device).to(torch.float32)
-                
         
-        else:
-
-            y = y_null.unsqueeze(0).repeat((1,1,1,1)).to(torch.float32)  # 4 x 1 x 120 x 4096 # T5 extracted feature of caption, 120 token, 4096
-            y_mask = y_null_mask.unsqueeze(0).unsqueeze(0).repeat((1,1,1,1)).to(torch.float32)  # 4 x 1 x 1 x 120 # caption indicate whether valid
+   
+        y = y_null.unsqueeze(0).repeat((1,1,1,1)).to(torch.float32)  # 4 x 1 x 120 x 4096 # T5 extracted feature of caption, 120 token, 4096
+        y_mask = y_null_mask.unsqueeze(0).unsqueeze(0).repeat((1,1,1,1)).to(torch.float32)  # 4 x 1 x 1 x 120 # caption indicate whether valid
 
         y = y.squeeze(0)
         y_mask = y_mask.squeeze(0)
