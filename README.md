@@ -1,4 +1,4 @@
-# InstaRevive: One-Step Image Enhancement via Dynamic Score Matching (ICLR 2024)
+# InstaRevive: One-Step Image Enhancement via Dynamic Score Matching (ICLR 2025)
 
 > [Yixuan Zhu](https://eternalevan.github.io/)\* $\dagger$, Haolin Wang\* , [Ao Li](https://rammusleo.github.io/), [Wenliang Zhao](https://wl-zhao.github.io/)\*, [Yansong Tang](https://andytang15.github.io/), [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1), [Jiwen Lu](http://ivg.au.tsinghua.edu.cn/Jiwen_Lu/), [Lei Chen](https://andytang15.github.io/) $\ddagger$
 > 
@@ -6,7 +6,7 @@
 
 [**[Paper]**](https://openreview.net/pdf?id=G1CN7R5qwE)
 
-The repository contains the official implementation for the paper "InstaRevive: One-Step Image Enhancement via Dynamic Score Matching" (**ICLR 2024**).
+The repository contains the official implementation for the paper "InstaRevive: One-Step Image Enhancement via Dynamic Score Matching" (**ICLR 2025**).
 
 We propose InstaRevive, a straightforward yet powerful image enhancement framework that employs score-based diffusion distillation to harness potent generative capability and minimize the sampling steps.
 
@@ -90,10 +90,10 @@ Please cite us if our work is useful for your research.
 
 ```
 @misc{zhu2024flowie,
-      title={FlowIE: Efficient Image Enhancement via Rectified Flow}, 
-      author={Yixuan Zhu and Wenliang Zhao and Ao Li and Yansong Tang and Jie Zhou and Jiwen Lu},
-      year={2024},
-      eprint={2406.00508},
+      title={InstaRevive: One-Step Image Enhancement via Dynamic Score Matching}, 
+      author={Yixuan Zhu, Haolin Wang, Ao Li, Wenliang Zhao, Yansong Tang, Jingxuan Niu, Lei Chen, Jie Zhou, Jiwen Lu},
+      year={2025},
+      eprint={2504.00508},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
