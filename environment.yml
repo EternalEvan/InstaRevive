@@ -1,4 +1,4 @@
-name: PixArt
+name: InstaRevive
 channels:
   - pytorch
   - nvidia
@@ -9,7 +9,7 @@ dependencies:
   - pytorch-cuda=11.7
   - pip:
     - timm==0.6.12
-    - diffusers
+    - diffusers==0.30.0
     - accelerate
     - mmcv==1.7.0
     - diffusers

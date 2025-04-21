@@ -1,5 +1,5 @@
 mmcv==1.7.0
-#git+https://github.com/huggingface/diffusers
+diffusers==0.30.0
 timm==0.6.12
 accelerate==0.25.0
 tensorboard
